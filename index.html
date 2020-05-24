@@ -13,11 +13,13 @@
 
   <!-- <link rel="stylesheet" href="css/styles.css"> -->
   <style>
-    html {
+    body {
+      background-color: #f9f9f9;
       font-family: 'Open Sans', sans-serif;
     }
+
     h1 {
-      font-size: 2em;
+      font-size: 60px;
       font-family: 'Arvo', serif;
       color: #42039c;
     }
@@ -27,8 +29,8 @@
     }
 
     footer {
-      text-align: center;
-      padding: 10px;
+      text-align: right;
+      padding: 15px 30px;
     }
 
     /* h1 {
@@ -51,41 +53,15 @@
       }
     } */
 
-    .header {
-      text-align: center;
-      padding-top: 20vh;
-      padding-bottom: 20vh;
-    }
-
-    .mini-header {
-      position: fixed;
-      padding: 0;
-      text-align: left;
-    }
-
-    .mini-header .tagline {
-      display: none;
-    }
-
-    .padded-body {
-      padding-top: 126px;
-    }
-
-    .content {
-    }
-
     .content>div {
-      padding: 30px;
-    }
-
-    .opening {
-      font-size: 1.5em;
+      padding: 50px;
     }
 
     .service-item {
-      border: 2px #42039c dashed;
-      padding: 20px;
-      margin: 20px 0;
+      padding: 0 20px 20px 20px;
+      margin: 0 0 40px 0;
+      font-size: 26px;
+      line-height: 32px;
     }
 
     .about-item {
@@ -100,36 +76,44 @@
     }
 
     #navbar {
-      overflow: hidden;
-      background-color: #fff;
-      transition: 0.4s;
-      width: 100%;
+      position: fixed;
       top: 0;
       z-index: 97;
+      width: 100%;
+      height: 90px;
+      background-color: #f9f9f9;
     }
 
-    #navigation-toggle {
-      color: #ffffff;
-      font-size: 50px;
-      padding-right: 40px;
+    #logo {
+      position: fixed;
+      top: 180px;
+      z-index: 98;
+      width: 1000px;
+    }
+
+    #contact-display-toggle {
+      padding: 30px 40px 0 0;
       position: fixed;
       top: 0;
       z-index: 99;
       right: 0;
       cursor: pointer;
+      line-height: 24px;
     }
 
-    #navigation-toggle div {
-      transition: transform 0.2s;
-      color: #42039c;
+    #contact-display-toggle div {
+      color: #000;
+      font-size: 24px;
     }
 
-    #navigation-toggle.active div {
+    #contact-display-toggle.active div {
       transform: rotate(45deg);
       color: #fff;
+      font-size: 60px;
+      transition: transform 0.2s;
     }
 
-    #navigation {
+    #contact-display {
       display: none;
       position: fixed;
       top: 0;
@@ -137,141 +121,151 @@
       color: #fff;
       width: 100%;
       height: 100%;
-    }
-
-    #navigation.active {
-      display: block;
-      background-color: #42039c;
-    }
-
-    #navigation ul {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      padding: 100px;
-      font-size: 40px;
       text-align: center;
     }
 
-    #navigation a:link, #navigation a:visited {
+    #contact-display.active {
+      display: block;
+      background-color: #42039c;
+      padding-top: 30vh;
+    }
+
+    #contact-display h1 {
+      font-size: 80px;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+
+    #contact-display a:link, #contact-display a:visited, #contact-display a:hover, #contact-display a:active {
+      font-size: 36px;
+      font-family: 'Arvo', serif;
+    }
+
+    #contact-display a:link, #contact-display a:visited {
       color: #fff;
     }
 
     /* mouse over link */
-    #navigation a:hover {
+    #contact-display a:hover {
       color: #ffc107;
     }
 
     /* selected link */
-    #navigation a:active {
+    #contact-display a:active {
       color: #ce9c09;
     }
 
+    #header {
+      padding-top: 400px;
+      padding-bottom: 150px;
+    }
+
+    #header .tagline {
+      font-size: 70px;
+    }
+
+    #about h1 {
+      margin-bottom: 40px;
+    }
+
+    #about p {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
     #contact {
-      background: #f3f1ee;
-      text-align: center;
-      font-family: 'Arvo', serif;
-      padding: 30px;
-      font-size: 40px;
+      padding: 15px;
+    }
+
+    #contact h1 {
+      font-size: 80px;
+      color: #000;
+      font-family: 'Open Sans', sans-serif;
+      margin-top: 40px;
+      margin-bottom: 30px;
     }
 
     #contact a:link, #contact a:visited, #contact a:hover, #contact a:active {
+      font-size: 36px;
+      font-family: 'Arvo', serif;
       color: #42039c;
     }
   </style>
 
 </head>
 
-<body data-spy="scroll" data-target="#navigation">
-  <div id="navbar" class="header">
-    <h1 id="logo">a <strong>better</strong> consultancy</h1>
-    <div class="tagline">tagline</div>
+<body>
+  <div id="navbar"><!-- placeholder for background --></div>
+  
+  <div id="contact-display-toggle">
+    <div id="contact-display-toggle-text">CONTACT</div>
   </div>
 
-  <div id="navigation-toggle">
-    <div>+</div>
+  <div id="contact-display">
+    <h1>Let's talk.</h1>
+    <a href="mailto:contact@abetterconsultancy.co" target="_blank">contact@abetterconsultancy.co</a>
   </div>
 
-  <div id="navigation">
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#services">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#about">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#contact">Contact</a>
-      </li>
-    </ul>
-  </div>
+  <img id="logo" src="logo-dark.png">
 
   <div class="content">
-  
-    <hr>
+    <div id="header">
+      <div class="tagline">We are a low bullshit, technology specific, management consultancy based in Singapore.</div>
+    </div>
 
     <div id="services">
-      <h1>Facing these challenges in your business?</h1>
-
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
-            <div class="service-item">Lorem Ipsum dolor est</div>
+          <div class="col-xl-4 col-lg-8 col-md-12 col-sm-12 col-12">
+            <h1>You're in the right place if your have a problem with...</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-6">
+            <div class="service-item">Navigating the various questions and requirements Enterprises and their IT or risk teams ask</div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6 col-6">
-            <div class="service-item">Lorem Ipsum dolor est</div>
+            <div class="service-item">Adapting your existing business model to work in the borderless digital global market</div>
+          </div>
+          <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-6">
+            <div class="service-item">Evolving applications and workflows to a self-service 'API first' modern way of working</div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6 col-6">
-            <div class="service-item">Lorem Ipsum dolor est</div>
+            <div class="service-item">figuring out how your business actually works in reality, and what your customers want from you</div>
+          </div>
+          <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-6">
+            <div class="service-item">understanding what technology and operational decisions to prioritize in order to unblock your business</div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6 col-6">
-            <div class="service-item">Lorem Ipsum dolor est</div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
-            <div class="service-item">Lorem Ipsum dolor est</div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
-            <div class="service-item">Lorem Ipsum dolor est</div>
+            <div class="service-item">knowing how to meet the obligations of  regulators or regulated industry clients</div>
           </div>
         </div>
       </div>
     </div>
-
-    <hr>
 
     <div id="about">
-      <h1>We're not your typical consultancy</h1>
-
-      <div class="opening">Here is a blob of text to justify we are special and why you should engage us for all your businesses</div>
-
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-            <div class="about-item">
-              <h2>Some lorem thingy</h2>
-              <p>Lorem Ipsum dolor est and more and more and more and more and more</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-            <div class="about-item">
-              <h2>Some lorem thingy</h2>
-              <p>Lorem Ipsum dolor est and more and more and more and more and more</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-            <div class="about-item">
-              <h2>Some lorem thingy</h2>
-              <p>Lorem Ipsum dolor est and more and more and more and more and more</p>
+          <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+            <h1>We know what we are, and what we aren't.</h1>
+
+            <div>
+              <p>We're fed up after years of putting up with mediocre corporate decision making predicated on job preservation and mutual backscratching, so we formed A Better Consultancy to offer our clients a way out of the IT Services trap.</p>
+              <p>We're def up of being fed a diet of crass business process outsourcing, automation, innovation and other horsecrap by consultants and vendors whose only revenue model is 'bloodsucker'.</p>
+              <p>We don't want your long term recurring revenue trapped in a services contract, we don't want to sell you more hours for mediocre consultants to pay their mortgages with, an we don't want to waste your time with pointless meetings about the meetings we're going to have.</p>
+              <p>We want you to come to us with a problem, we want to spend some time understanding the problem, then we want to tell the trusth, as we see it, and what we think you should do about it.</p>
+              <p>We want you to be successful, we want you to build on what we've told you and for your business to make the big time, and then, maybe if you have another problem, and if we're free, we can help you again.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <hr>
-
-    <div id="contact" class="contact">
-      <a href="mailto:contact@abetterconsultancy.co" target="_blank">contact@abetterconsultancy.co</a>
+      <div id="contact" class="contact">
+        <h1>Let's talk.</h1>
+        <a href="mailto:contact@abetterconsultancy.co" target="_blank">contact@abetterconsultancy.co</a>
+      </div>
     </div>
   </div>
 
@@ -285,42 +279,71 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   <script>
-    // $(function() {
-    //   //caches a jQuery object containing the header element
-    //   var header = $("#navbar");
-    //   $(window).scroll(function() {    
-    //     var scroll = $(window).scrollTop();
-    
-    //     if (scroll >= 50) {
-    //         header.addClass("mini-header");
-    //         $(".content").addClass("padded-body");
-    //     } else {
-    //         header.removeClass("mini-header");
-    //         $(".content").removeClass("padded-body");
-    //     }
-    //   })
-    // });
+    var isContactPageOpened = false;
+
+    function lerp(percent, first, last) {
+      return first * (1 - percent) + last * percent;
+    }
+
+    function setLogo(logoObj) {
+      var scroll = $(window).scrollTop();
+
+      if (isContactPageOpened || scroll >= 200) {
+        logoObj.css("top", "16px");
+        logoObj.css("width", "300px");
+        logoObj.css("left", "50%");
+        logoObj.css("transform", "translateX(-50%)");
+      } else if (scroll === 0) {
+        logoObj.css("top", "180px");
+        logoObj.css("width", "1000px");
+        logoObj.css("left", "0%");
+        logoObj.css("transform", "translateX(0%)");
+      } else {
+        // scale between 0 to 200 scroll value
+        var percent = scroll / 200;
+        var top = lerp(percent, 180, 16);
+        var width = lerp(percent, 1000, 300);
+        var left = lerp(percent, 0, 50);
+        var transform = lerp(percent, 0, -50);
+
+        logoObj.css("top", top + "px");
+        logoObj.css("width", width + "px");
+        logoObj.css("left", left + "%");
+        logoObj.css("transform", "translateX(" + transform + "%)");
+      }
+    }
 
     $(function() {
-      var navToggle = $("#navigation-toggle");
-      var navPage = $("#navigation");
-
-      navToggle.click(function() {
-        if (navToggle.hasClass("active")) {
-          navToggle.removeClass("active");
-          navPage.removeClass("active");
-        } else {
-          navToggle.addClass("active");
-          navPage.addClass("active");
-        }
-      });
-
-      $(".nav-link").on("click", function(event) {
-        if (navToggle.hasClass("active")) {
-          navToggle.removeClass("active");
-          navPage.removeClass("active");
-        }
+      //caches a jQuery object containing the header element
+      var logo = $("#logo");
+      $(window).scroll(function() {    
+        setLogo(logo);
       })
+    });
+
+    $(function() {
+      var contactDisplayToggle = $("#contact-display-toggle");
+      var contactDisplayToggleText = $("#contact-display-toggle-text");
+      var contactDisplay = $("#contact-display");
+
+      var logo = $("#logo");
+
+      contactDisplayToggle.click(function() {
+        if (contactDisplayToggle.hasClass("active")) {
+          contactDisplayToggle.removeClass("active");
+          contactDisplayToggleText.text("CONTACT");
+          contactDisplay.removeClass("active");
+          logo.attr("src", "logo-dark.png");
+          isContactPageOpened = false;
+        } else {
+          contactDisplayToggle.addClass("active");
+          contactDisplayToggleText.text("+");
+          contactDisplay.addClass("active");
+          logo.attr("src", "logo-light.png");
+          isContactPageOpened = true;
+        }
+        setLogo(logo);
+      });
     });
   </script>
 </body>
