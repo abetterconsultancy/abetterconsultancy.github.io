@@ -8,44 +8,311 @@
   <meta name="description" content="A Better Consultancy">
   <meta name="author" content="contact@abetterconsultancy.co">
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <style>
+    html {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1 {
+      font-size: 2em;
+      font-family: 'Arvo', serif;
+      color: #42039c;
+    }
+
+    hr {
+      margin: 0 10vw;
+    }
+
+    /* h1 {
+      display: block;
+      transform: translateX(50%);
+      transition: transform 1s;
+      
+      .active & {
+        transform: translateX(0%);
+      }
+    }
+
+    span {
+      display: inline-block; // critically must be inline-block
+      transform: translateX(-50%);
+      transition: transform 1s;
+      
+      .active & {
+        transform: translateX(0%);
+      }
+    } */
+
+    .header {
+      text-align: center;
+      padding-top: 20vh;
+      padding-bottom: 20vh;
+    }
+
+    .mini-header {
+      position: fixed;
+      padding: 0;
+      text-align: left;
+    }
+
+    .mini-header .tagline {
+      display: none;
+    }
+
+    .padded-body {
+      padding-top: 126px;
+    }
+
+    .content {
+    }
+
+    .content>div {
+      padding: 30px;
+    }
+
+    .opening {
+      font-size: 1.5em;
+    }
+
+    .service-item {
+      border: 2px #42039c dashed;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .about-item {
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .about-item h2 {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+
+    #navbar {
+      overflow: hidden;
+      background-color: #fff;
+      transition: 0.4s;
+      width: 100%;
+      top: 0;
+      z-index: 97;
+    }
+
+    #navigation-toggle {
+      color: #ffffff;
+      font-size: 50px;
+      padding-right: 40px;
+      position: fixed;
+      top: 0;
+      z-index: 99;
+      right: 0;
+      cursor: pointer;
+    }
+
+    #navigation-toggle div {
+      transition: transform 0.2s;
+      color: #42039c;
+    }
+
+    #navigation-toggle.active div {
+      transform: rotate(45deg);
+      color: #fff;
+    }
+
+    #navigation {
+      display: none;
+      position: fixed;
+      top: 0;
+      z-index: 98;
+      color: #fff;
+      width: 100%;
+      height: 100%;
+    }
+
+    #navigation.active {
+      display: block;
+      background-color: #42039c;
+    }
+
+    #navigation ul {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 100px;
+      font-size: 40px;
+      text-align: center;
+    }
+
+    #navigation a:link, #navigation a:visited {
+      color: #fff;
+    }
+
+    /* mouse over link */
+    #navigation a:hover {
+      color: #ffc107;
+    }
+
+    /* selected link */
+    #navigation a:active {
+      color: #ce9c09;
+    }
+
+    #contact {
+      background: #f3f1ee;
+      text-align: center;
+      font-family: 'Arvo', serif;
+      padding: 30px;
+      font-size: 40px;
+    }
+
+    #contact a:link, #contact a:visited, #contact a:hover, #contact a:active {
+      color: #42039c;
+    }
+  </style>
 
 </head>
 
-<body>
-  <nav>
-    use bootstrap scrollspy
-    <a>Services</a>
-    <a>About</a>
-    <a>Contact</a>
-  </nav>
-
-  <div class="header">
-    <h1>a better consultancy</h1>
-    <div>tagline</div>
-    persistent header, on scroll logo move from center to top left
+<body data-spy="scroll" data-target="#navigation">
+  <div id="navbar" class="header">
+    <h1 id="logo">a <strong>better</strong> consultancy</h1>
+    <div class="tagline">tagline</div>
   </div>
+
+  <div id="navigation-toggle">
+    <div>+</div>
+  </div>
+
+  <div id="navigation">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content">
   
-  <hr>
+    <hr>
 
-  <div>
-    service header
+    <div id="services">
+      <h1>Facing these challenges in your business?</h1>
 
-    blocky lorem ipsum
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+            <div class="service-item">Lorem Ipsum dolor est</div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+            <div class="service-item">Lorem Ipsum dolor est</div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+            <div class="service-item">Lorem Ipsum dolor est</div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+            <div class="service-item">Lorem Ipsum dolor est</div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+            <div class="service-item">Lorem Ipsum dolor est</div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+            <div class="service-item">Lorem Ipsum dolor est</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div id="about">
+      <h1>We're not your typical consultancy</h1>
+
+      <div class="opening">Here is a blob of text to justify we are special and why you should engage us for all your businesses</div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="about-item">
+              <h2>Some lorem thingy</h2>
+              <p>Lorem Ipsum dolor est and more and more and more and more and more</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="about-item">
+              <h2>Some lorem thingy</h2>
+              <p>Lorem Ipsum dolor est and more and more and more and more and more</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+            <div class="about-item">
+              <h2>Some lorem thingy</h2>
+              <p>Lorem Ipsum dolor est and more and more and more and more and more</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div id="contact" class="contact">
+      <a href="mailto:contact@abetterconsultancy.co" target="_blank">contact@abetterconsultancy.co</a>
+    </div>
   </div>
 
-  <hr>
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-  <div>
-    about header
+  <script>
+    // $(function() {
+    //   //caches a jQuery object containing the header element
+    //   var header = $("#navbar");
+    //   $(window).scroll(function() {    
+    //     var scroll = $(window).scrollTop();
+    
+    //     if (scroll >= 50) {
+    //         header.addClass("mini-header");
+    //         $(".content").addClass("padded-body");
+    //     } else {
+    //         header.removeClass("mini-header");
+    //         $(".content").removeClass("padded-body");
+    //     }
+    //   })
+    // });
 
-    blocky lorem ipsum
-  </div>
+    $(function() {
+      var navToggle = $("#navigation-toggle");
+      var navPage = $("#navigation");
 
-  <hr>
+      navToggle.click(function() {
+        if (navToggle.hasClass("active")) {
+          navToggle.removeClass("active");
+          navPage.removeClass("active");
+        } else {
+          navToggle.addClass("active");
+          navPage.addClass("active");
+        }
+      });
 
-  <div>
-    Contact us <a href="mailto:contact@abetterconsultancy.co">contact@abetterconsultancy.co</a>
-  </div>
+      $(".nav-link").on("click", function(event) {
+        if (navToggle.hasClass("active")) {
+          navToggle.removeClass("active");
+          navPage.removeClass("active");
+        }
+      })
+    });
+  </script>
 </body>
 </html>
