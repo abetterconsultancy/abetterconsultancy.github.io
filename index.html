@@ -314,14 +314,17 @@
     }
 
     $(function() {
-      //caches a jQuery object containing the header element
       var logo = $("#logo");
+
+      // set logo on load
+      setLogo(logo);
+
+      // set logo on scroll
       $(window).scroll(function() {    
         setLogo(logo);
-      })
-    });
+      });
 
-    $(function() {
+      // set contact display toggle
       var contactDisplayToggle = $("#contact-display-toggle");
       var contactDisplayToggleText = $("#contact-display-toggle-text");
       var contactDisplay = $("#contact-display");
