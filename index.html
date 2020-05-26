@@ -10,12 +10,15 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+
 
   <!-- <link rel="stylesheet" href="css/styles.css"> -->
   <style>
     body {
       background-color: #f9f9f9;
       font-family: 'Open Sans', sans-serif;
+      <!-- font-family: 'Fira Sans', sans-serif; -->
     }
 
     h1 {
@@ -32,6 +35,19 @@
       text-align: right;
       padding: 15px 30px;
     }
+
+    .section-heading {	
+  	width: 289px;
+  	height: 117px;
+  	font-family: Arvo;
+  	font-size: 32px;
+  	font-weight: normal;
+  	font-stretch: normal;
+  	font-style: normal;
+  	line-height: normal;
+  	letter-spacing: normal;
+  	color: #42029c;
+     }
 
     /* h1 {
       display: block;
@@ -53,15 +69,22 @@
       }
     } */
 
-    .content>div {
+    .content {
       padding: 50px;
     }
 
     .service-item {
-      padding: 0 20px 20px 20px;
-      margin: 0 0 40px 0;
-      font-size: 26px;
-      line-height: 32px;
+	width: 270px;
+	height: 100px;
+  	font-family: "Fira Sans";
+  	font-size: 16px;
+  	font-weight: normal;
+  	font-stretch: normal;
+  	font-style: normal;
+  	line-height: normal;
+  	letter-spacing: normal;
+  	color: #000000;
+   
     }
 
     .about-item {
@@ -163,7 +186,16 @@
     }
 
     #header .tagline {
-      font-size: 55px;
+  	width: 931px;
+  	height: 150px;
+  	font-family: "Fira Sans";
+  	font-size: 46px;
+  	font-weight: normal;
+  	font-stretch: normal;
+  	font-style: normal;
+  	line-height: 1.09;
+  	letter-spacing: normal;
+  	color: #000000;
     }
 
     #about h1 {
@@ -219,7 +251,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-            <div class="tagline">We are a technology forward management consultancy based in Singapore. We like to solve problems, without all the nonsense and fluff.</div>
+		  <div class="tagline">We are a technology forward management consultancy based in Singapore.<P><BR>We like to solve problems, without all the nonsense and fluff.</div>
           </div>
         </div>
       </div>
@@ -229,7 +261,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
-            <h1>You're in the right place if you have a problem with...</h1>
+            <div class="section-heading">You're in the right place if you have a problem with...</div>
           </div>
         </div>
         <div class="row">
@@ -258,17 +290,32 @@
     <div id="about">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12">
-            <h1>We know what we are, and what we aren't.</h1>
+          <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
 
-            <div>
-              <p>We are a team of accomplished professionals focused on providing a better consultancy experience</p>
-              <p class="negative">We aren’t a volume based consultancy, so constrain ourselves to a few clients in any given year to give you the attention you deserve</p>
-              <p>We tell you the (often uncomfortable) truths of your situation - but we’ll also give you a route through the maze</p>
-              <p class="negative">We aren’t here to milk you; we believe great technology empowers your business to evolve and scale.</p>
-              <p>We only take on an engagement if we feel we can do it properly.</p>
-              <br/>
+		  <div class="section-heading">Who we are, and who we are not. </div>
+	</div>
+           <div class="row">
+          <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-6">
+              <div class="service-item"> We are a team of accomplished professionals focused on providing a better consultancy experience </div>
+	  </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+              <div class="service-item"> We are not a volume based consultancy, so constrain ourselves to a few clients in any given year to give you the attention you deserve </div>
+	   </div>
+          <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-6">
+              <div class="service-item"> We tell you the (often uncomfortable) truths of your situation - but we’ll also give you a route through the maze </div>
+	  </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+              <div class="service-item"> We are not here to milk you; we believe great technology empowers your business to evolve and scale.  </div>
+	  </div>
+
+          <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-6">
+              <div class="service-item"> We only take on an engagement if we feel we can do it properly.  </div>
+	  </div>
+
+
+<div class="section-heading">
               <p>Our goal is to liberate you from the trap of legacy systems and service contracts quickly and effectively.</p>
+</div>
             </div>
           </div>
         </div>
