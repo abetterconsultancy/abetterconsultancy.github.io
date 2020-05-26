@@ -300,7 +300,7 @@
     function setLogo(logoObj) {
       var scroll = $(window).scrollTop();
 
-      if (isContactPageOpened || scroll >= 200) {
+      if (isContactPageOpened) {
         logoObj.css("top", "16px");
         logoObj.css("width", "300px");
         logoObj.css("left", "50%");
@@ -310,13 +310,18 @@
         logoObj.css("width", "1000px");
         logoObj.css("left", "0%");
         logoObj.css("transform", "translateX(0%)");
+      } else if (scroll >= 200) {
+        logoObj.css("top", "16px");
+        logoObj.css("width", "300px");
+        logoObj.css("left", "50px");
+        logoObj.css("transform", "translateX(0%)");
       } else {
         // scale between 0 to 200 scroll value
         var percent = scroll / 200;
         var top = lerp(percent, 180, 16);
         var width = lerp(percent, 1000, 300);
-        var left = lerp(percent, 0, 50);
-        var transform = lerp(percent, 0, -50);
+        var left = lerp(percent, 0, 2.5);
+        // var transform = lerp(percent, 0, -50);
 
         logoObj.css("top", top + "px");
         logoObj.css("width", width + "px");
