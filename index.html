@@ -24,7 +24,17 @@
   <div class="navbar-logo">
     <img alt="a better consultancy" src="assets/logo_black.png">
   </div>
-  <div id="navbar-menu">CONTACT</div>
+  <div id="navbar-menu">
+    <div id="contact-display-toggle">
+      <div id="contact-display-toggle-text">CONTACT</div>
+    </div>
+  </div>
+</div>
+
+<!-- Full page contact display that's toggleable from the navbar menu CONTACT -->
+<div id="full-page-contact-display">
+  <h1>Let's talk.</h1>
+  <a href="mailto:contact@abetterconsultancy.co" target="_blank">contact@abetterconsultancy.co</a>
 </div>
 
 <div class="content">
@@ -181,32 +191,30 @@
         var logo = $("#logo");
 
         // set logo on load
-        setLogo(logo);
+        // setLogo(logo);
 
         // set logo on scroll
         $(window).scroll(function () {
-            setLogo(logo);
+            // setLogo(logo);
         });
 
         // set contact display toggle
         var contactDisplayToggle = $("#contact-display-toggle");
         var contactDisplayToggleText = $("#contact-display-toggle-text");
-        var contactDisplay = $("#contact-display");
-
-// I think this is superflous    var logo = $("#logo");
+        var contactDisplay = $("#full-page-contact-display");
 
         contactDisplayToggle.click(function () {
             if (contactDisplayToggle.hasClass("active")) {
                 contactDisplayToggle.removeClass("active");
                 contactDisplayToggleText.text("CONTACT");
                 contactDisplay.removeClass("active");
-                logo.attr("src", "logo-dark.png");
+                logo.attr("src", "assets/logo_black.png");
                 isContactPageOpened = false;
             } else {
                 contactDisplayToggle.addClass("active");
                 contactDisplayToggleText.text("+");
                 contactDisplay.addClass("active");
-                logo.attr("src", "logo-light.png");
+                logo.attr("src", "assets/logo_white.png");
                 isContactPageOpened = true;
             }
             setLogo(logo);
