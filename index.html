@@ -1,433 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <title>A Better Consultancy</title>
+  <meta name="description" content="A Better Consultancy"/>
+  <meta name="author" content="contact@abetterconsultancy.co"/>
 
-  <title>ABC</title>
-  <meta name="description" content="A Better Consultancy">
-  <meta name="author" content="contact@abetterconsultancy.co">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-
-  <!-- <link rel="stylesheet" href="css/styles.css"> -->
-  <style>
-    body {
-      background-color: #f9f9f9;
-      font-family: 'Fira Sans', sans-serif;
-    }
-
-    h1 {
-      font-size: 60px;
-      font-family: 'Arvo', serif;
-      color: #42039c;
-    }
-
-    hr {
-      margin: 0 10vw;
-    }
-
-    footer {
-      text-align: right;
-      padding: 15px 30px;
-    }
-
-    .section-quote {	
-  	width: 384px;
-  	height: 65px;
-  	font-family: Arvo;
-  	font-size: 24px;
-  	font-weight: normal;
-  	font-stretch: normal;
-  	font-style: normal;
-  	line-height: normal;
-  	letter-spacing: normal;
-  	color: #42029c;
-     }
-
-    .section-heading {	
-  	width: 289px;
-  	height: 117px;
-  	font-family: Arvo;
-  	font-size: 32px;
-  	font-weight: normal;
-  	font-stretch: normal;
-  	font-style: normal;
-  	line-height: normal;
-  	letter-spacing: normal;
-  	color: #42029c;
-     }
-
-    /* h1 {
-      display: block;
-      transform: translateX(50%);
-      transition: transform 1s;
-      
-      .active & {
-        transform: translateX(0%);
-      }
-    }
-
-    span {
-      display: inline-block; // critically must be inline-block
-      transform: translateX(-50%);
-      transition: transform 1s;
-      
-      .active & {
-        transform: translateX(0%);
-      }
-    } */
-
-    .content {
-      padding: 50px;
-    }
-
-    .service-item {
-	width: 270px;
-	height: 100px;
-  	font-family: "Fira Sans";
-  	font-size: 16px;
-  	font-weight: normal;
-  	font-stretch: normal;
-  	font-style: normal;
-  	line-height: normal;
-  	letter-spacing: normal;
-  	color: #000000;
-   
-    }
-
-    .about-item {
-      padding: 20px;
-      margin: 20px 0;
-    }
-
-    .about-item h2 {
-      font-family: 'Fira Sans', sans-serif;
-      font-size: 1.3em;
-      font-weight: bold;
-    }
-
-    #navbar {
-      position: fixed;
-      top: 0;
-      z-index: 97;
-      width: 100%;
-      height: 90px;
-      background-color: #f9f9f9;
-    }
-
-    #logo {
-      position: fixed;
-      top: 180px;
-      z-index: 98;
-      width: 1000px;
-    }
-
-    #contact-display-toggle {
-      padding: 30px 40px 0 0;
-      position: fixed;
-      top: 0;
-      z-index: 99;
-      right: 0;
-      cursor: pointer;
-      line-height: 24px;
-    }
-
-    #contact-display-toggle div {
-      color: #000;
-      font-size: 24px;
-    }
-
-    #contact-display-toggle.active div {
-      transform: rotate(45deg);
-      color: #fff;
-      font-size: 60px;
-      transition: transform 0.2s;
-    }
-
-    #contact-display {
-      display: none;
-      position: fixed;
-      top: 0;
-      z-index: 98;
-      color: #fff;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-    }
-
-    #contact-display.active {
-      display: block;
-      background-color: #42039c;
-      padding-top: 30vh;
-    }
-
-    #contact-display h1 {
-      font-size: 80px;
-      color: #fff;
-      font-family: 'Fira Sans', sans-serif;
-      margin-top: 40px;
-      margin-bottom: 30px;
-    }
-
-    #contact-display a:link, #contact-display a:visited, #contact-display a:hover, #contact-display a:active {
-      font-size: 36px;
-      font-family: 'Arvo', serif;
-    }
-
-    #contact-display a:link, #contact-display a:visited {
-      color: #fff;
-    }
-
-    /* mouse over link */
-    #contact-display a:hover {
-      color: #ffc107;
-    }
-
-    /* selected link */
-    #contact-display a:active {
-      color: #ce9c09;
-    }
-
-    #header {
-      padding-top: 400px;
-      padding-bottom: 150px;
-    }
-
-    #header .tagline {
-  	width: 931px;
-  	height: 150px;
-  	font-family: "Fira Sans";
-  	font-size: 46px;
-  	font-weight: normal;
-  	font-stretch: normal;
-  	font-style: normal;
-  	line-height: 1.09;
-  	letter-spacing: normal;
-  	color: #000000;
-    }
-
-    #about h1 {
-      margin-bottom: 40px;
-    }
-
-    #about p {
-      font-size: 36px;
-      margin-bottom: 30px;
-    }
-
-    #about .negative {
-      padding-left: 80px;
-    }
-
-    #contact {
-      padding: 15px;
-    }
-
-    #contact h1 {
-      font-size: 80px;
-      color: #000;
-      font-family: 'Fira Sans', sans-serif;
-      margin-top: 40px;
-      margin-bottom: 30px;
-    }
-
-    #contact a:link, #contact a:visited, #contact a:hover, #contact a:active {
-      font-size: 36px;
-      font-family: 'Arvo', serif;
-      color: #42039c;
-    }
-  </style>
-
+  <link rel="stylesheet" href="css/abc.css"/>
 </head>
-
 <body>
-  <div id="navbar"><!-- placeholder for background --></div>
-  
-  <div id="contact-display-toggle">
-    <div id="contact-display-toggle-text">CONTACT</div>
+<div class="navbar-area">
+  <!-- placeholder for background -->
+  <div class="navbar-logo">
+    <img alt="a better consultancy" src="assets/logo_black.png">
+  </div>
+  <div id="navbar-menu">CONTACT</div>
+</div>
+
+<div class="content">
+  <div class="title-area">
+    <div class="title-area-title">
+      We are a tech focused management consultancy based in Singapore.
+    </div>
+    <div class="title-area-subtitle">
+      <h2> We like to solve problems, without all the nonsense and fluff. </h2>
+    </div>
   </div>
 
-  <div id="contact-display">
-    <h1>Let's talk.</h1>
-    <a href="mailto:contact@abetterconsultancy.co" target="_blank">contact@abetterconsultancy.co</a>
-  </div>
-
-  <img id="logo" src="logo-dark.png">
-
-  <div class="content">
-    <div id="header">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-		  <div class="tagline">We are a tech focused management consultancy based in Singapore.<P><BR>We like to solve problems, without all the nonsense and fluff.</div>
+  <div class="section-1-area">
+    <div class="section-1-title">
+      You're in the right place if you have a problem with...
+    </div>
+    <div class="container-fluid section-1-content">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+          <div class="card-container">
+            <div class="card-content">
+              Understanding what decisions to prioritise to unblock your business and
+              allow it to reach your customers effectively.
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+          <div class="card-container">
+            <div class="card-content">
+              Evolving your software to represent the needs of your clients, not the
+              limitations of your developers
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+          <div class="card-container">
+            <div class="card-content">
+              Navigating the, at times complex, world of Enterprise technology, risk and
+              compliance departments
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+          <div class="card-container">
+            <div class="card-content">Adapting your existing business model to work in the borderless digital
+              global market
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+          <div class="card-container">
+            <div class="card-content">Migrating your applications and workflows to a self-service 'API first'
+              modern way of working
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-6">
+          <div class="card-container">
+            <div class="card-content">
+              Knowing how to handle your data safely, and meet the obligations of
+              regulators and regulated industry clients
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div id="services">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
-		  <div class="section-heading">You're in the right place if you have a problem with...<P><bR></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-6">
-            <div class="service-item">Understanding what decisions to prioritise to unblock your business and allow it to reach your customers effectively.</div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
-            <div class="service-item">Evolving your software to represent the needs of your clients, not the limitations of your developers</div>
-          </div>
-          <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-6">
-            <div class="service-item">Navigating the, at times complex, world of Enterprise technology, risk and compliance departments </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
-            <div class="service-item">Adapting your existing business model to work in the borderless digital global market</div>
-          </div>
-          <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-6">
-            <div class="service-item">Migrating your applications and workflows to a self-service 'API first' modern way of working</div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
-            <div class="service-item">Knowing how to handle your data safely, and meet the obligations of regulators and regulated industry clients</div>
-          </div>
-        </div>
-      </div>
+  <div class="section-2-area">
+    <div class="section-2-title">We are not complicated.</div>
+    <div class="section-2-content">
+      We want to provide something different from the usual consultancy experience
+      <br/><br/>
+      We constrain ourselves to a few clients in any given year to focus our energy
+      <br/><br/>
+      We only take on an engagement if we feel we can do it properly.
+      <br/><br/>
+      We are not here to milk you; we focus on building well architected products that stand the test of scale
     </div>
+  </div>
 
-    <div id="about">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
-            <div class="section-heading">We are not complicated.</div>
-	      </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-6">
-              <div class="service-item"> We want to provide something different from the usual consultancy experience </div>
-	      </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
-              <div class="service-item"> We constrain ourselves to a few clients in any given year to focus our energy</div>
-	      </div>
+  <div class="section-3-area">
+    <div class="section-3-content">
+      Our goal is to liberate you from the trap of legacy systems and tech
+      debt in a commercial and effective way.
+    </div>
+  </div>
 
-          <div class="col-lg-4 offset-lg-4 col-md-6 col-sm-6 col-6">
-              <div class="service-item"> We only take on an engagement if we feel we can do it properly.  </div>
-	      </div>
-          <div class="col-lg-4 col-md-6 col-sm-6 col-6">
-              <div class="service-item"> We are not here to milk you; we focus on building well architected products that stand the test of scale  </div>
-	      </div>
+  <div class="section-4-area">
+    <div class="section-4-title">Let's talk.</div>
+    <div class="section-4-content">
+      <a href="mailto:contact@abetterconsultancy.co" target="_blank">contact@abetterconsultancy.co</a>
+    </div>
+  </div>
+</div>
 
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
-		  <div class="section-quote"> Our goal is to liberate you from the trap of legacy systems and tech debt in a commercial and effective way. </div>
-          </div>
-        </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div id="contact" class="contact">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
-        <h1>Let's talk.</h1>
-        <a href="mailto:contact@abetterconsultancy.co" target="_blank">contact@abetterconsultancy.co</a>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-
-  <footer>
+<footer>
+  <div class="footer-copyright">
     ©A Better Consultancy 2020
-  </footer>
+  </div>
+</footer>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-  <script>
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script>
     var isContactPageOpened = false;
 
     function lerp(percent, first, last) {
-      return first * (1 - percent) + last * percent;
+        return first * (1 - percent) + last * percent;
     }
 
     function setLogo(logoObj) {
-      var scroll = $(window).scrollTop();
+        var scroll = $(window).scrollTop();
 
-      if (isContactPageOpened) {
-        logoObj.css("top", "16px");
-        logoObj.css("width", "300px");
-        logoObj.css("left", "50%");
-        logoObj.css("transform", "translateX(-50%)");
-      } else if (scroll === 0) {
-        logoObj.css("top", "180px");
-        logoObj.css("width", "1000px");
-        logoObj.css("left", "0%");
-        logoObj.css("transform", "translateX(0%)");
-      } else if (scroll >= 200) {
-        logoObj.css("top", "16px");
-        logoObj.css("width", "300px");
-        logoObj.css("left", "50px");
-        logoObj.css("transform", "translateX(0%)");
-      } else {
-        // scale between 0 to 200 scroll value
-        var percent = scroll / 200;
-        var top = lerp(percent, 180, 16);
-        var width = lerp(percent, 1000, 300);
-        var left = lerp(percent, 0, 2.5);
-        // var transform = lerp(percent, 0, -50);
+        if (isContactPageOpened) {
+            logoObj.css("top", "16px");
+            logoObj.css("width", "300px");
+            logoObj.css("left", "50%");
+            logoObj.css("transform", "translateX(-50%)");
+        } else if (scroll === 0) {
+            logoObj.css("top", "180px");
+            logoObj.css("width", "1000px");
+            logoObj.css("left", "0%");
+            logoObj.css("transform", "translateX(0%)");
+        } else if (scroll >= 200) {
+            logoObj.css("top", "16px");
+            logoObj.css("width", "300px");
+            logoObj.css("left", "50px");
+            logoObj.css("transform", "translateX(0%)");
+        } else {
+            // scale between 0 to 200 scroll value
+            var percent = scroll / 200;
+            var top = lerp(percent, 180, 16);
+            var width = lerp(percent, 1000, 300);
+            var left = lerp(percent, 0, 2.5);
+            // var transform = lerp(percent, 0, -50);
 
-        logoObj.css("top", top + "px");
-        logoObj.css("width", width + "px");
-        logoObj.css("left", left + "%");
-        logoObj.css("transform", "translateX(" + transform + "%)");
-      }
+            logoObj.css("top", top + "px");
+            logoObj.css("width", width + "px");
+            logoObj.css("left", left + "%");
+            logoObj.css("transform", "translateX(" + transform + "%)");
+        }
     }
 
-    $(function() {
-      var logo = $("#logo");
+    $(function () {
+        var logo = $("#logo");
 
-      // set logo on load
-      setLogo(logo);
-
-      // set logo on scroll
-      $(window).scroll(function() {    
+        // set logo on load
         setLogo(logo);
-      });
 
-      // set contact display toggle
-      var contactDisplayToggle = $("#contact-display-toggle");
-      var contactDisplayToggleText = $("#contact-display-toggle-text");
-      var contactDisplay = $("#contact-display");
+        // set logo on scroll
+        $(window).scroll(function () {
+            setLogo(logo);
+        });
 
-      var logo = $("#logo");
+        // set contact display toggle
+        var contactDisplayToggle = $("#contact-display-toggle");
+        var contactDisplayToggleText = $("#contact-display-toggle-text");
+        var contactDisplay = $("#contact-display");
 
-      contactDisplayToggle.click(function() {
-        if (contactDisplayToggle.hasClass("active")) {
-          contactDisplayToggle.removeClass("active");
-          contactDisplayToggleText.text("CONTACT");
-          contactDisplay.removeClass("active");
-          logo.attr("src", "logo-dark.png");
-          isContactPageOpened = false;
-        } else {
-          contactDisplayToggle.addClass("active");
-          contactDisplayToggleText.text("+");
-          contactDisplay.addClass("active");
-          logo.attr("src", "logo-light.png");
-          isContactPageOpened = true;
-        }
-        setLogo(logo);
-      });
+// I think this is superflous    var logo = $("#logo");
+
+        contactDisplayToggle.click(function () {
+            if (contactDisplayToggle.hasClass("active")) {
+                contactDisplayToggle.removeClass("active");
+                contactDisplayToggleText.text("CONTACT");
+                contactDisplay.removeClass("active");
+                logo.attr("src", "logo-dark.png");
+                isContactPageOpened = false;
+            } else {
+                contactDisplayToggle.addClass("active");
+                contactDisplayToggleText.text("+");
+                contactDisplay.addClass("active");
+                logo.attr("src", "logo-light.png");
+                isContactPageOpened = true;
+            }
+            setLogo(logo);
+        });
     });
-  </script>
+</script>
 </body>
 </html>
