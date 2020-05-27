@@ -45,10 +45,13 @@ body {
     cursor: pointer;
 }
 
-#contact-display-toggle #contact-display-toggle-text {
-    color: #000;
+#contact-display-toggle-text {
+    color: var(--indigo);
     font-size: 24px;
-    z-index: 99;
+}
+
+#contact-display-toggle-text:hover {
+    color: var(--black);
 }
 
 #contact-display-toggle.active #contact-display-toggle-text {
