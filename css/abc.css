@@ -117,6 +117,8 @@ body {
     width: 308px;
     height: 36px;
     flex-grow: 1;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-logo img {
@@ -286,6 +288,15 @@ footer {
         --content-width: 100%;
     }
 
+    .navbar-area {
+        padding: 15px;
+    }
+
+    .navbar-logo img {
+        height: 24px;
+        font-family: Arvo, serif;
+    }
+
     .content {
         padding: 15px;
     }
@@ -318,7 +329,7 @@ footer {
 
     .card-container {
         width: 100%;
-        height: auto;
+        height: 100px;
         margin-bottom: 10px;
     }
 
