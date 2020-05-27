@@ -114,7 +114,7 @@ body {
 }
 
 .section-1-title {
-    width: 450px;
+    max-width: 450px;
     font-family: Arvo, serif;
     font-size: 32px;
     text-align: center;
@@ -150,10 +150,10 @@ body {
 
 .section-2-area {
     margin-bottom: 100px;
+    width: 610px;
 }
 
 .section-2-title {
-    width: 610px;
     font-family: Arvo, serif;
     font-size: 32px;
     color: var(--indigo);
@@ -161,14 +161,8 @@ body {
 }
 
 .section-2-content {
-    width: 610px;
     font-family: "Fira Sans", sans-serif;
     font-size: 20px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
     color: var(--black);
 }
 
@@ -176,7 +170,6 @@ body {
     font-family: Arvo, serif;
     font-size: 32px;
     line-height: 1.13;
-    text-align: right;
     color: var(--indigo);
     margin-bottom: 30px;
 }
@@ -185,6 +178,7 @@ body {
     width: 610px;
     margin-right: 0;
     margin-left: auto;
+    text-align: right;
 }
 
 .section-4-title {
@@ -196,17 +190,17 @@ body {
     margin-bottom: 10px;
 }
 
-.section-4-content {
+.section-4-email {
     height: 24px;
     font-family: "Fira Sans", sans-serif;
     font-size: 20px;
     color: var(--black);
 }
 
-.section-4-content a:link,
-.section-4-content a:hover,
-.section-4-content a:visited,
-.section-4-content a:active {
+.section-4-email a:link,
+.section-4-email a:hover,
+.section-4-email a:visited,
+.section-4-email a:active {
     color: var(--black);
 }
 
@@ -231,12 +225,91 @@ footer {
     margin-left: auto;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
     :root {
         --content-width: 100%;
     }
 
+    .content {
+        padding: 15px;
+    }
+
+    .title-area {
+        margin-top: 106px;
+    }
+
+    .title-area-title {
+        font-size: 48px;
+    }
+
+    .title-area-subtitle {
+        font-size: 30px;
+        line-height: 1.17;
+    }
+
+    .section-2-area, .section-3-content {
+        width: 100%;
+    }
+
+    .section-1-area {
+        margin-bottom: 40px; /* 50px - card bottom margin (10px) */
+    }
+
+    .section-1-title {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
     .card-container {
         width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .card-content {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .section-2-area {
+        margin-bottom: 30px;
+    }
+
+    .section-2-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .section-2-content {
+        font-size: 16px;
+    }
+
+    .section-3-area {
+        margin-bottom: 50px;
+    }
+
+    .section-3-content {
+        text-align: center;
+    }
+
+    .section-1-title,
+    .section-2-title,
+    .section-3-content,
+    .section-4-email {
+        font-size: 20px;
+    }
+
+    .section-4-title {
+        font-size: 36px;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    footer {
+        padding: 0 15px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
     }
 }
