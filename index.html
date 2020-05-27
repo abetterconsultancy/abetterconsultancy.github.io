@@ -22,7 +22,7 @@
 <div class="navbar-area">
   <!-- placeholder for background -->
   <div class="navbar-logo">
-    <img alt="a better consultancy" src="assets/logo_black.png">
+    <a href="/"><img id="logo" alt="a better consultancy" src="assets/logo_purple.png"></a>
   </div>
   <div id="navbar-menu">
     <div id="contact-display-toggle">
@@ -190,6 +190,12 @@
     $(function () {
         var logo = $("#logo");
 
+        logo.hover(function () {
+            $(this).attr("src", "assets/logo_black.png");
+        }, function () {
+            $(this).attr("src", "assets/logo_purple.png");
+        })
+
         // set logo on load
         // setLogo(logo);
 
@@ -208,16 +214,16 @@
                 contactDisplayToggle.removeClass("active");
                 contactDisplayToggleText.text("CONTACT");
                 contactDisplay.removeClass("active");
-                logo.attr("src", "assets/logo_black.png");
+                // logo.attr("src", "assets/logo_black.png");
                 isContactPageOpened = false;
             } else {
                 contactDisplayToggle.addClass("active");
                 contactDisplayToggleText.text("+");
                 contactDisplay.addClass("active");
-                logo.attr("src", "assets/logo_white.png");
+                // logo.attr("src", "assets/logo_white.png");
                 isContactPageOpened = true;
             }
-            setLogo(logo);
+            // setLogo(logo);
         });
     });
 </script>
