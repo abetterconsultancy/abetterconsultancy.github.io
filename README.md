@@ -1,4 +1,6 @@
-# TODO: Topline/NavBar styling
-# TODO: review content again and check it for 'readability' and tone
-# TODO: get denise to review
+# TODO: Google Analytics or similar
+# TODO: Inline the maxcdn network call, which seems expensive
+# TODO: Denise minor redits
+
+# TODO: Phase 2 redesign & uplift
  
