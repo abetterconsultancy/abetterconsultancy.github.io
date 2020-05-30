@@ -123,7 +123,7 @@ body {
 
 .navbar-logo img {
     height: 36px;
-    font-family: Arvo, serif;
+    font-family: 'Arvo', serif;
 }
 
 .menu {
@@ -173,7 +173,7 @@ body {
 
 .section-1-title {
     max-width: 450px;
-    font-family: Arvo, serif;
+    font-family: 'Arvo', serif;
     font-size: 32px;
     text-align: center;
     color: var(--indigo);
@@ -212,7 +212,7 @@ body {
 }
 
 .section-2-title {
-    font-family: Arvo, serif;
+    font-family: 'Arvo', serif;
     font-size: 32px;
     color: var(--indigo);
     margin-bottom: 30px;
@@ -225,7 +225,7 @@ body {
 }
 
 .section-3-area {
-    font-family: Arvo, serif;
+    font-family: 'Arvo', serif;
     font-size: 32px;
     line-height: 1.13;
     color: var(--indigo);
@@ -250,7 +250,7 @@ body {
 
 .section-4-email {
     height: 24px;
-    font-family: "Fira Sans", sans-serif;
+    font-family: "Arvo", serif;
     font-size: 20px;
     color: var(--black);
 }
@@ -294,7 +294,7 @@ footer {
 
     .navbar-logo img {
         height: 24px;
-        font-family: Arvo, serif;
+        font-family: 'Arvo', serif;
     }
 
     .content {
@@ -325,6 +325,7 @@ footer {
     .section-1-title {
         width: 100%;
         margin-bottom: 10px;
+        text-align: left;
     }
 
     .card-container {
@@ -343,7 +344,7 @@ footer {
     }
 
     .section-2-title {
-        text-align: center;
+        text-align: left;
         margin-bottom: 20px;
     }
 
@@ -356,7 +357,7 @@ footer {
     }
 
     .section-3-content {
-        text-align: center;
+        text-align: right;
     }
 
     .section-1-title,
