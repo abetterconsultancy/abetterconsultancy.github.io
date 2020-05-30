@@ -57,7 +57,7 @@ body {
 #contact-display-toggle.active #contact-display-toggle-text {
     transform: rotate(45deg);
     font-size: 60px;
-    font-weight: 300;
+    font-weight: 200;
     transition: transform 0.2s;
 }
 
